@@ -3,18 +3,18 @@ function growFlower() {
     var sizeIndicator = document.getElementById('sizeIndicator');
     var currentSize = flower.offsetWidth;
 
-    // Incrementar el tamaño de la flor
+    // Incrementar el tamaÃ±o de la flor
     var newSize = currentSize + 20;
     flower.style.width = newSize + 'px';
     flower.style.height = newSize + 'px';
 
-    // Actualizar el indicador de tamaño
-    sizeIndicator.innerHTML = 'Tamaño de la flor: ' + newSize + 'px';
+    // Actualizar el indicador de tamaÃ±o
+    sizeIndicator.innerHTML = 'TamaÃ±o de la flor: ' + newSize + 'px';
 
-    // Agregar una línea para imprimir el valor de newSize en la consola del navegador
-    console.log("Tamano de la flor:", newSize);
+    // Agregar una lÃ­nea para imprimir el valor de newSize en la consola del navegador
+    console.log("Tamano de la flor2:", newSize);
 
-    // Cambiar la imagen cuando alcance cierto tamaño
+    // Cambiar la imagen cuando alcance cierto tamaÃ±o
     if (newSize >= 300) {
         flower.style.backgroundImage = "url('../images/flower.jpg')";
     }
