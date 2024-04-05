@@ -9,7 +9,7 @@ function growFlower() {
     flower.style.height = newSize + 'px';
 
     // Actualizar el indicador de tamaño
-    sizeIndicator.innerHTML = 'Tamaño de la flor: ' + newSize + 'px';
+    sizeIndicator.innerHTML = 'Tamaño de la flor 2: ' + newSize + 'px';
 
     // Agregar una línea para imprimir el valor de newSize en la consola del navegador
     console.log("Tamano de la flor2:", newSize);
