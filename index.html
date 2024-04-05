@@ -11,5 +11,20 @@
     <p id="sizeIndicator">Tamaño de la flor 2: 200px</p>
     <button onclick="growFlower()">Regar la flor</button>
     <script src="script.js"></script>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "a22520ad-f7a4-428e-a210-2c3ef4b9abc7", // El ID de esta integración.
+    region: "au-syd", // La región donde está alojada tu integración.
+    serviceInstanceID: "52668e13-a65c-4c74-afec-faa89e888775", // El ID de tu instancia de servicio.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+    
 </body>
 </html>
