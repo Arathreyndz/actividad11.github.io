@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     const dotsContainer = document.querySelector(".slider-dots");
+    const menuBtn = document.querySelector(".hamburger-menu");
+    const navMenu = document.querySelector(".nav-menu");
+
+    // Boton hamburguesa
+    menuBtn.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
 
     // Genera los indicadores de posición
     slides.forEach((slide, index) => {
@@ -52,11 +59,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
-    // Agregar una línea para imprimir el valor de newSize en la consola del navegador
-    console.log("Tamano de la flor2:", newSize);
-
-    // Cambiar la imagen cuando alcance cierto tamaño
-    if (newSize >= 300) {
-        flower.style.backgroundImage = "url('../images/flower.jpg')";
-    }
-}
