@@ -1,11 +1,135 @@
-#flower {
-    width: 200px;
-    height: 200px;
-    background-image: url('../images/amore.jpg');
-    background-size: cover;
-    transition: all 0.5s ease;
+body {
+    font-family: Arial, 'Arial Narrow', Arial, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-button {
-    margin-top: 20px;
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+    background-color: #3ba844;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center; /* Centra horizontalmente los elementos del menú */
+}
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+.nav-menu {
+    list-style: none;
+    padding: 40;
+    margin: 0;
+    display: inline-block; /* Hace que el menú ocupe solo el espacio que necesita */
+}
+
+    .nav-menu li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+        .nav-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+/* Estilos para el logo */
+.logo {
+    margin: 0;
+    font-size: 35px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilos para el icono del carrito */
+.cart-icon img {
+    width: 50px;
+}
+
+/* Estilos para el slider */
+.slider {
+    position: absolute;
+    width: 100%; /* Aumenta el ancho del slider */
+    height: 280px; /* Aumenta la altura del slider */
+    background-color: #0055AA;
+    text-align: center;
+    margin: auto; /* Centra horizontalmente el slider */
+    left: 0;
+    right: 0;
+    top: 140px; /* Ajusta la posición vertical del slider */
+}
+
+.slide {
+    relative: absolute;
+    top: 20;
+    left: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+    .slide.active {
+        display: flex;
+    }
+
+    .slide img {
+        max-height: 120%;
+        max-width: 120%;
+        object-fit: contain;
+        transition-duration: 2s; /* Duración de la transición de las imágenes */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1); /* Agrega una sombra a las imágenes */
+    }
+
+/* Estilos para los indicadores de posición */
+.slider-dots {
+    position: absolute;
+    top: 250px; /* Ajusta la posición vertical de los indicadores */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 15px; /* Reduce el tamaño de los indicadores */
+    height: 15px; /* Reduce el tamaño de los indicadores */
+    border-radius: 50%;
+    background-color: #1f3768;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+
+    .dot.active {
+        background-color: #fff;
+    }
+
+/* Estilos para las secciones */
+.section {
+    padding: 280px 0;
+}
+
+    .section h2 {
+        margin-bottom: 20px;
+    }
+
+p {
+    line-height: 1.5;
+}
+
+.section#contacto p {
+    font-size: 15px; /* Tamaño de fuente más pequeño */
 }
