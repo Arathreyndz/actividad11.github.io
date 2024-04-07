@@ -3,28 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amor y Flores</title>
+    <title>Negocio de Equipos Electrónicos para Data Centers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="flower"></div>
-    <p id="sizeIndicator">Tamaño de la flor 2: 200px</p>
-    <button onclick="growFlower()">Regar la flor</button>
-    <script src="script.js"></script>
 
-<script>
-  window.watsonAssistantChatOptions = {
-    integrationID: "a22520ad-f7a4-428e-a210-2c3ef4b9abc7", // El ID de esta integración.
-    region: "au-syd", // La región donde está alojada tu integración.
-    serviceInstanceID: "52668e13-a65c-4c74-afec-faa89e888775", // El ID de tu instancia de servicio.
-    onLoad: async (instance) => { await instance.render(); }
-  };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
-</script>
-    
+
+
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">AT CONTROLS MTDC</h1>
+            <ul class="nav-menu">
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#catalogo">Catálogo de Productos</a></li>
+                <li><a href="#compras">Compras y pedidos</a></li>
+            </ul>
+            <div class="cart-icon">
+                <img src="images/cart-icon.png" alt="Carrito de Compra">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider de Imágenes -->
+    <section id="quienes-somos" class="slider">
+        <div class="slider-dots"></div> <!-- Contenedor para los indicadores de posición -->
+        <div class="slide slide1 active">
+            <img src="images/imagen1.png" alt="Slide 1">
+        </div>
+        <div class="slide slide2">
+            <img src="images/imagen2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide slide3">
+            <img src="images/imagen3.png" alt="Slide 3">
+        </div>
+        
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>CEO: Jesus Arath Reyna Hernandez - Curso Deep Learning (TECMILENIO) - Interactue con nuestro Chatbot &#8680; </p>
+            <p>Dirección: Colonia Palmares, Querétaro, México</p>
+            <p>Teléfono: (+52) 551-580-33-61</p>
+            <p>Correo electrónico: al03097935@tecmilenio.mx.com</p>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo de Productos -->
+    <section id="catalogo" class="section">
+        <div class="container">
+            <h2>Catálogo de Productos</h2>
+            <!-- Agrega aquí la lista de productos o un enlace al catálogo -->
+        </div>
+    </section>
+
+    <!-- Sección de Compras y Pedidos -->
+    <section id="compras" class="section">
+        <div class="container">
+            <h2>Compras y Pedidos</h2>
+            <!-- Agrega aquí información sobre cómo realizar pedidos o comprar productos -->
+        </div>
+    </section>
+
+    <!-- Script para la integración de Watson Assistant Chat -->
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "a22520ad-f7a4-428e-a210-2c3ef4b9abc7", // El ID de esta integración.
+            region: "au-syd", // La región donde está alojada tu integración.
+            serviceInstanceID: "52668e13-a65c-4c74-afec-faa89e888775", // El ID de tu instancia de servicio.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+
+    <!-- Script para cambiar el slider de imágenes automáticamente -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".slide");
+            let currentSlide = 0;
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove("active");
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add("active");
+            }
+
+            setInterval(nextSlide, 5000); // Cambia de slide cada 5 segundos (5000 milisegundos)
+        });
+    </script>
+
+    <script src="script.js"></script> 
+
 </body>
 </html>
