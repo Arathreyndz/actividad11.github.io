@@ -28,9 +28,8 @@ body {
     list-style: none;
     padding: 0px;
     margin: 0px;
-    display: none; /* Oculta el menú por defecto */
     position: fixed; /* Posiciona el menú de forma fija en la ventana del navegador */
-    top: 60px; /* Coloca el menú a 60px desde la parte superior de la ventana */
+    top: 5px; /* Coloca el menú a 60px desde la parte superior de la ventana */
     right: 100px; /* Coloca el menú a 20px desde el borde derecho de la ventana */
     background-color: #0F62FE;
     border-radius: 5px;
@@ -48,7 +47,7 @@ body {
     /* Estilos para las barras del botón de hamburguesa */
     .hamburger-menu span {
         display: block;
-        width: 30px; /* Aumenta el ancho de las barras */
+        width: 15px; /* Aumenta el ancho de las barras */
         height: 4px; /* Aumenta el grosor de las barras */
         background-color: #fff; /* Color blanco */
         margin-bottom: 6px; /* Aumenta el espacio entre las barras */
@@ -59,7 +58,7 @@ body {
 /* Estilos para el logo */
 .logo {
     margin: 0;
-    font-size: 35px; /* Tamaño de fuente más pequeño */
+    font-size: 22px; /* Tamaño de fuente más pequeño */
 }
 
 /* Estilos para el icono del carrito */
