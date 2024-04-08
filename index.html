@@ -12,13 +12,13 @@
     <nav class="navbar">
         <div class="container">
             <h1 class="logo">AT CONTROLS MTDC</h1>
-            <button class="hamburger-menu">
+            <button class="hamburger-menu" onclick="toggleMenu()">
                 <span></span> <!-- Barra superior -->
                 <span></span> <!-- Barra media -->
                 <span></span> <!-- Barra inferior -->
             </button>
             <div class="nav-container">
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="menu"> <!-- Añadimos un id al menú -->
                     <li><a href="#quienes-somos">Quiénes Somos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="#catalogo">Catálogo de Productos</a></li>
@@ -96,9 +96,26 @@
 
             setInterval(nextSlide, 5000); // Cambia de slide cada 5 segundos (5000 milisegundos)
         });
-</script>
+    </script>
 
-<script src="script.js"></script> 
+    <!-- Script para controlar el menú desplegable -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu"); // Obtenemos el menú desplegable por su id
+            menu.classList.toggle("active"); // Alternamos la clase "active" para mostrar u ocultar el menú
+        }
+
+        // Agregamos un controlador de eventos a cada elemento de menú para ocultar el menú cuando se hace clic
+        var menuItems = document.querySelectorAll(".nav-menu li a");
+        menuItems.forEach(function(item) {
+            item.addEventListener("click", function() {
+                var menu = document.getElementById("menu");
+                menu.classList.remove("active"); // Ocultamos el menú
+            });
+        });
+    </script>
+
+    <script src="script.js"></script> 
 
 </body>
 </html>
